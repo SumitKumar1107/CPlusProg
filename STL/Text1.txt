@@ -1,0 +1,45 @@
+Three Element of stl:
+1.Container - array,vector,deque,stack,set,map
+2.Algorithms - find,max,count,accumulate,sort
+3.Iterator - forward,reverse,by value,by reference,constant.
+
+#include<vector>
+#include<algorithm>
+
+vector<int>v{1,5,3};
+
+sort(v.begin(),v.end()); //sort
+
+for(auto elem: v)
+{
+cout<<elem<<endl; //1\n3\n5
+}
+
+reverse(v.begin(),v.end()); //reverse
+
+Types of container
+1.Sequence - array,vector,list,deque
+2.associative-set,map
+3.container adapter - stack,queue,priority queue
+
+template <typename t>
+t max(t a,t b)
+{
+return (a>b)?a:b;
+}
+
+max<int>(2,3)//generate integer version
+
+iterator are objects that work like pointer by design.
+
+std::vector<int>::iterator it1 = vec.begin; or auto it=vec.begin();
+std::list<std::string>::iterator it2;
+
+std::vector<int>::reverse_iterator it = vec.begin(); //reverse iterator
+
+rbegin() - reverse
+
+iterator point to container elements
+
+
+
