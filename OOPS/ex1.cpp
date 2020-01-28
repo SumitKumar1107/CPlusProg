@@ -12,7 +12,7 @@ class Player{
     int xp;
     
     //methods
-  private:
+  public:
     void talk(string text)
     {
       cout<<name<<" says "<<text<<endl;
@@ -25,9 +25,11 @@ int main(){
   Player hero;
   
   frank.name = "frank";
+  hero.name = "sumit";
   frank.health = 100;
   frank.xp = 12;
   frank.talk("hi there");
+  hero.talk("hi there");
   
   
   Player *enemy = new Player;

@@ -60,7 +60,7 @@ int main()
     
     if(frank.deposit(200))
     {
-        cout<<"deposit ok"<<endl;
+        cout<<"deposit ok"<< endl;
     }
     else
     {
