@@ -20,31 +20,25 @@ class Player
         {
             return x;
         }
-        Player(std::string name_val="NONE",int x = 0);
-        ~Player();
+        Player(std::string name_val="NONE",int x_val = 0):name(name_val),x(x_val)
+        {
+          created++;
+        }
+        ~Player()
+        {
+          destroyed++;
+        }
 
-        static int get_num_players();
+        static int get_num_players()
+        {
+          return created-destroyed;
+        }
 };
 
 int Player::remaining = 0;
 int Player::created = 0;
 int Player::destroyed = 0;
 
-Player::Player(std::string name_val,int x_val):name{name_val},x{x_val}
-{
-    ++created;
-}
-
-Player::~Player()
-{
-    ++destroyed;
-}
-
-int Player::get_num_players()
-{
-    remaining = created-destroyed;
-    return remaining;
-}
 
 void created_players()
 {
